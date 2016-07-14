@@ -7,6 +7,9 @@ public class prueba_2 {
 
 
 	{
+		
+		
+		
 	try
 	{
 	   File lector= new File("C:\\Users\\practicantesistemas\\Desktop\\Archivos de prueba TXT");	
@@ -16,6 +19,7 @@ public class prueba_2 {
 	   //Leer el primer carácter
 	   //Se debe almacenar en una variable de tipo int
 	   int caracter_Numero = fr.read();
+	   
 	   //Se recorre el fichero hasta encontrar el carácter -1
 	   //   que marca el final del fichero
 	 
