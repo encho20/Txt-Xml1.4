@@ -11,12 +11,11 @@ public class Clase_incioTexteo_de_lectura {
 	FileReader ObjetoFile  = new FileReader("C:\\Users\\practicantesistemas\\Desktop\\Edison Dearmas\\testeo.txt");
 	@SuppressWarnings("resource")
 	BufferedReader ObjetoBuffer = new BufferedReader(ObjetoFile);
-	int Contador=1;
 	String Texto;
-    while ((Texto=ObjetoBuffer.readLine())!= null){
-    	if (Texto=="|"){
+   
+	while ((Texto=ObjetoBuffer.readLine())!= null){
+    	if (Texto==" "){
     		System.out.println("\n");
-    		 String[] anArray;
     	}
     	
     	else {
@@ -24,8 +23,6 @@ public class Clase_incioTexteo_de_lectura {
     	}
     	
    
-    	Contador=Contador++;
-        Texto=Texto+Contador;  
     }
 
 }
