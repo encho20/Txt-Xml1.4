@@ -12,9 +12,10 @@ public class Clase_incioTexteo_de_lectura {
 	@SuppressWarnings("resource")
 	BufferedReader ObjetoBuffer = new BufferedReader(ObjetoFile);
 	String Texto;
-   
+	
 	while ((Texto=ObjetoBuffer.readLine())!= null){
-    	if (Texto==" "){
+    	
+		if (Texto=="CODIGO"){
     		System.out.println("\n");
     	}
     	
