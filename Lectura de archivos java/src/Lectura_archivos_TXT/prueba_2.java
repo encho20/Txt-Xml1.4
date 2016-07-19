@@ -30,23 +30,16 @@ public class prueba_2 {
 	 
 	   while(caracter_Numero != -1)
 	   {	   
-		   if(caracter_Numero==-1){
-			   System.out.println("\n");
+		   if(caracter_Numero==-7){
+			
+			   //System.out.println(" ");
 		   }
 		   
 		   else{
 			   
-			   System.out.print("\n");
+			   //System.out.print("\n");
 		   }
-		   if (String.valueOf(caracter_Numero).equals(null)){
-			
-			  System.out.println("\n"); 
-		   }
-		   else {
-  
-			 
-		   }
-			   
+		   
 		 System.out.print((char)caracter_Numero);
 	     caracter_Numero = lector.read();
 	   }

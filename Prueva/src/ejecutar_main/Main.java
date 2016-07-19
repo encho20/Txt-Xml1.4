@@ -17,13 +17,13 @@ public class Main {
 		ReportMarshaller<Reporte> marshaller = null;
  
 		Collections.addAll(Cliente,
-			new Cliente("Exito","carvajal","calle falsa 123",1234567L,13258468L,"csd465654d","csd465653d","",125,546),
-			new Cliente("Exito","Arican","calle falsa 1234",12345654L,13258479L,"csd465654d","csd465653d","Bogota",125,546)
+			new Cliente("Exito","carvajal","calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " "),
+			new Cliente("Exito","carvajal","calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " ")
 			
 		);
 		Collections.addAll(producto,
-				new Producto("10", 123456789121347867L, "jack Daniel's"),
-				new Producto("reytul", 987654321987654321L, "jack Daniel's")
+				new Producto("10", "123456789121347867", "jack Daniel's"),
+				new Producto("reytul", "987654321987654321", "jack Daniel's")
 		);
 		Reporte.setCliente(Cliente);
 		Reporte.setProducto (producto);
