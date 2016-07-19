@@ -26,15 +26,17 @@ public class prueba_2 {
 	   //Se recorre el fichero hasta encontrar el carácter -1
 	   //   que marca el final del fichero
 	 
+
 	 
 	   while(caracter_Numero != -1)
 	   {	   
-		   if(caracter_Numero==1){
+		   if(caracter_Numero==-1){
 			   System.out.println("\n");
 		   }
 		   
 		   else{
 			   
+			   System.out.print("\n");
 		   }
 		   if (String.valueOf(caracter_Numero).equals(null)){
 			
