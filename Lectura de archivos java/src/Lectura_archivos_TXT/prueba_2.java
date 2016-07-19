@@ -8,9 +8,7 @@ public class prueba_2 {
 
 	String Object, version,DocNum,DocDate,DocDueDate,CardCode,Series,TaxDate,NumAtCard,Address2
     ,Address,Comments,PickRemark,U_BKV_UID,U_GW_Fecha1,U_GW_Fecha2;
-    
-	
-    
+   
 	{
 		
 	try
