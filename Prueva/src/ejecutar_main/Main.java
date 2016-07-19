@@ -17,8 +17,8 @@ public class Main {
 		ReportMarshaller<Reporte> marshaller = null;
  
 		Collections.addAll(Cliente,
-			new Cliente("Exito","carvajal","calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " "),
-			new Cliente("Exito","carvajal","calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " ")
+			new Cliente("Exito","carvajal",null, null, "calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " "),
+			new Cliente("Exito","carvajal",null, null, "calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " ")
 			
 		);
 		Collections.addAll(producto,
