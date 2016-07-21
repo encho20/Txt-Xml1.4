@@ -49,6 +49,15 @@ public class Adminfo {
 	}
  
 	
+	public String getVersion() {
+		return Object;
+	}
+ 
+	public void setVersion(String Version) {
+		this.Version = Version;
+	}
+ 
+	
 	
 	public String getNombreCadena() {
 		return NombreCadena;

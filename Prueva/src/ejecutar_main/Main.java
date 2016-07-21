@@ -41,6 +41,8 @@ public class Main {
 				System.out.println(user.getCodigo_EAN_Cadena());
 				System.out.println(user.getCodigo_EAN_Tienda());
 				System.out.println(user.getCodigo_SAP_Tienda());
+				System.out.println(user.getObject());
+				System.out.println(user.getVersion());
 				System.out.println(user.getCiudada());
 				System.out.println(user.getCodigoSAP_Cadena()+"\n");
 			}
