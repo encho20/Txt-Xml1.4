@@ -5,25 +5,25 @@ import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.JAXBException;
 import dao_model.jaxb.ReportMarshaller;
-import modelo_entities.Cliente;
+import modelo_entities.Adminfo;
 import modelo_entities.Producto;
 import modelo_entities.Reporte;
 public class Main {
  
 	public static void main(String[] args) {
-		List<Cliente> Cliente = new ArrayList<>();
+		List<Adminfo> Cliente = new ArrayList<>();
 		List<Producto> producto = new ArrayList<>();
 		Reporte Reporte = new Reporte();
 		ReportMarshaller<Reporte> marshaller = null;
  
 		Collections.addAll(Cliente,
-			new Cliente("Exito","carvajal",null, null, "calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " "),
-			new Cliente("Exito","carvajal",null, null, "calle falsa 123","1234567","13258468","csd465654d","csd465653d","","125","546", " ", " ")
+			new Adminfo("Exito","carvajal","calle falsa 123","1234567","13258468L","csd465654d","csd465653d"," ","125","546","2", "17"),
+			new Adminfo("Exito","Arican","calle falsa 1234","12345654","13258479L","csd465654d","csd465653d","Bogota","125","546","2", "17")
 			
 		);
 		Collections.addAll(producto,
-				new Producto("10", "123456789121347867", "jack Daniel's"),
-				new Producto("reytul", "987654321987654321", "jack Daniel's")
+				new Producto("10", 123456789121347867L, "jack Daniel's"),
+				new Producto("reytul", 987654321987654321L, "jack Daniel's")
 		);
 		Reporte.setCliente(Cliente);
 		Reporte.setProducto (producto);
@@ -35,7 +35,7 @@ public class Main {
 			Reporte = null;
 			Reporte = marshaller.unmarshal(new File("C:\\Testeo\\l"));
 			System.out.println("Usuarios:\n");
-			for(Cliente user : Reporte.getCliente()) {
+			for(Adminfo user : Reporte.getCliente()) {
 				System.out.println(user.getNombreCadena());
 				System.out.println(user.getNombreTienda());
 				System.out.println(user.getCodigo_EAN_Cadena());

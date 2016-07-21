@@ -2,81 +2,55 @@ package modelo_entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.xml.crypto.Data;
-
-public class Cliente {
-	private String Object ="17";
-	private String Version="2";
+public class Adminfo {
+	private String Object;
+	private String Version;
 	private String NombreCadena;
 	private String NombreTienda;
-	private String DireccionTienda;
+	private String Address;
 	private String Codigo_EAN_Cadena;
 	private String Codigo_EAN_Tienda;
 	private String Codigo_SAP_Cadena;
 	private String Codigo_SAP_Tienda;
-	private String Ciudad;
+	private String ProjectCode;
 	private String codigo1;
 	private String codigo2;
-  
-    
+
  
-	public Cliente (String Object,String Version ,Date fechaDoc,Date fechaDocDue,String NombreCadena,
-			        String NombreTienda,String DireccionTienda,String Codigo_EAN_Tienda, 
-			        String Codigo_EAN_Cadena,String Codigo_SAP_Tienda,String CodigoSAP_Cadena,
-			        String Ciudad,String codigo1,String codigo2) 
+	public Adminfo () {}
+ 
+	public Adminfo (String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
+			    Codigo_EAN_Cadena,String Codigo_SAP_Tienda,String CodigoSAP_Cadena,String Ciudad,String codigo1,String codigo2) 
 	
 	{		
 	
 		super();
-		
-        this.Object=Object;
-        this.Version=Version;
-        this.FechaDoc=fechaDoc;
-        this.FechaDoc=fechaDocDue;
 		this.NombreCadena = NombreCadena;
 		this.NombreTienda = NombreTienda;
-		this.DireccionTienda = DireccionTienda;
+		this.Address = DireccionTienda;
 		this.Codigo_EAN_Cadena =Codigo_EAN_Cadena;
 		this.Codigo_EAN_Tienda =Codigo_EAN_Tienda;
 		this.Codigo_SAP_Cadena =CodigoSAP_Cadena ;
 		this.Codigo_SAP_Tienda =Codigo_SAP_Tienda ;
-		this.Ciudad = Ciudad;
+		this.ProjectCode = Ciudad;
 		this.codigo1 = codigo1;
-		this.codigo1 = codigo2;	
-		
-		
-		}
-	Date FechaDoc  = new Date(System.currentTimeMillis());
-	SimpleDateFormat fechaDoc = new SimpleDateFormat("yyyy-MM-dd");
-	
-	
-	Date FechaDocDue  = new Date(System.currentTimeMillis());
-	SimpleDateFormat fechaDocDue = new SimpleDateFormat("yyyy-MM-dd");
+		this.codigo1 = codigo2;
+	}
+	Date now = new Date(System.currentTimeMillis());
+	SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
  
-	
-
-	
-
-	public Date getDocData() {
-		return FechaDoc;
+ 
+	public String getObject() {
+		return Object;
 	}
  
-	public void setDocData(Date fecha) {
-		this.FechaDoc=fecha;
-	}
-	
-	
-	public Date getDocDueData() {
-		return FechaDocDue;
+	public void setObject(String Object) {
+		this.Object = Object;
 	}
  
-	public void setDocDueData(SimpleDateFormat fechaDocDue) {
-		this.fechaDocDue=fechaDocDue;
-	}
 	
-
 	
-   	public String getNombreCadena() {
+	public String getNombreCadena() {
 		return NombreCadena;
 	}
  
@@ -93,11 +67,11 @@ public class Cliente {
 	}
  
 	public String getDireccionTienda() {
-		return DireccionTienda;
+		return Address;
 	}
  
 	public void set(String DireccionTienda) {
-		this.DireccionTienda = DireccionTienda;
+		this.Address = DireccionTienda;
 	}
  
 	public String getCodigo_EAN_Cadena() {
@@ -134,10 +108,10 @@ public class Cliente {
 	
 		
    public void setCiudad(String Ciudad) {
-	       this.Ciudad= Ciudad;
+	       this.ProjectCode= Ciudad;
 			}
 	public String getCiudada() {
-	    return Ciudad;
+	    return ProjectCode;
 				}
 	  public void setcodigo1(String codigo1) {
 	       this.codigo1= codigo1;

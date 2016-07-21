@@ -12,18 +12,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Reporte {
 	
 	@XmlElement(name="Cliente")
-	private List<Cliente> Cliente;
+	private List<Adminfo> Cliente;
 	
 	@XmlElement(name="producto")
 	private List<Producto> producto;
  
 	public Reporte() {}
  
-	public List<Cliente> getCliente() {
+	public List<Adminfo> getCliente() {
 		return Cliente;
 	}
  
-	public void setCliente(List<Cliente> Cliente) {
+	public void setCliente(List<Adminfo> Cliente) {
 		this.Cliente = Cliente;
 	}
  
