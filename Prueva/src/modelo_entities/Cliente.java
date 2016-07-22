@@ -2,7 +2,7 @@ package modelo_entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Adminfo {
+public class Cliente {
 	private String Object;
 	private String Version;
 	private String NombreCadena;
@@ -17,9 +17,9 @@ public class Adminfo {
 	private String codigo2;
 
  
-	public Adminfo () {}
+	public Cliente () {}
  
-	public Adminfo (String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
+	public Cliente (String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
 			    Codigo_EAN_Cadena,String Codigo_SAP_Tienda,String CodigoSAP_Cadena,String Ciudad,String codigo1,String codigo2) 
 	
 	{		
@@ -50,7 +50,7 @@ public class Adminfo {
  
 	
 	public String getVersion() {
-		return Object;
+		return Version;
 	}
  
 	public void setVersion(String Version) {
