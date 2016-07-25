@@ -5,18 +5,23 @@ import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.JAXBException;
 import dao_model.jaxb.ReportMarshaller;
+import modelo_entities.AdmiInfo;
 import modelo_entities.Cliente;
 import modelo_entities.Producto;
 import modelo_entities.Reporte;
 public class Main {
  
 	public static void main(String[] args) {
+		List<AdmiInfo> AdmiInfo = new ArrayList<>();
 		List<Cliente> Cliente = new ArrayList<>();
 		List<Producto> producto = new ArrayList<>();
 		Reporte Reporte = new Reporte();
 		ReportMarshaller<Reporte> marshaller = null;
  
-		Collections.addAll(Cliente,
+		Collections.addAll(AdmiInfo,
+				new AdmiInfo("17","2")
+		);
+    	Collections.addAll(Cliente,
 			new Cliente("fsdf", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "),
 			new Cliente()
 			
@@ -25,8 +30,11 @@ public class Main {
 				new Producto("10", "12345678912134", "jack Daniel's")
 				
 		);
+	
+		Reporte.setAdmiInfo(AdmiInfo);
 		Reporte.setCliente(Cliente);
 		Reporte.setProducto (producto);
+		 
 		try {
 			marshaller = new ReportMarshaller<Reporte>();
 			marshaller.marshal(Reporte, new File("C:\\Testeo\\l" ));
@@ -34,6 +42,14 @@ public class Main {
 			System.out.println();
 			Reporte = null;
 			Reporte = marshaller.unmarshal(new File("C:\\Testeo\\l"));
+			
+
+                  System.out.println("\n:AdmiInfo\n");
+                for(AdmiInfo Adm  : Reporte.getAdmiInfo()) {
+	            System.out.println(Adm.getObject());
+	            System.out.println(Adm.getVersion()+"\n");
+}
+			
 			System.out.println("Usuarios:\n");
 			for(Cliente user : Reporte.getCliente()) {
 				System.out.println(user.getNombreCadena());
@@ -41,8 +57,6 @@ public class Main {
 				System.out.println(user.getCodigo_EAN_Cadena());
 				System.out.println(user.getCodigo_EAN_Tienda());
 				System.out.println(user.getCodigo_SAP_Tienda());
-				System.out.println(user.getObject());
-				System.out.println(user.getVersion());
 				System.out.println(user.getCiudada());
 				System.out.println(user.getCodigoSAP_Cadena()+"\n");
 			}

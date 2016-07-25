@@ -7,16 +7,28 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
  
-@XmlRootElement(name="Reporte")
+@XmlRootElement(name="BO")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Reporte {
 	
-	@XmlElement(name="BO")
+	@XmlElement(name="AdmiInfo")
+	private List<AdmiInfo> AdmiInfo;
+	
+	@XmlElement(name="Documents")
 	private List<Cliente> BO;
 	
 	@XmlElement(name="producto")
 	private List<Producto> producto;
  
+	public List<AdmiInfo> getAdmiInfo() {
+		return AdmiInfo;
+	}
+ 
+	public void setAdmiInfo(List<AdmiInfo> AdmiInfo) {
+		this.AdmiInfo = AdmiInfo;
+	}
+
+	
 	public Reporte() {}
  
 	public List<Cliente> getCliente() {
@@ -34,6 +46,9 @@ public class Reporte {
 	public void setProducto(List<Producto> producto) {
 		this.producto = producto;
 	}
+	
+	
+	
  
  
 }

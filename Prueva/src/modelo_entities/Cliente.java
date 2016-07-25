@@ -3,8 +3,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Cliente {
-	private String Object;
-	private String Version;
 	private String NombreCadena;
 	private String NombreTienda;
 	private String Address;
@@ -34,31 +32,10 @@ public class Cliente {
 		this.Codigo_SAP_Tienda =Codigo_SAP_Tienda ;
 		this.ProjectCode = Ciudad;
 		this.codigo1 = codigo1;
-		this.codigo1 = codigo2;
+		this.codigo2 = codigo2;
 	}
 	Date now = new Date(System.currentTimeMillis());
 	SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
- 
- 
-	public String getObject() {
-		return Object;
-	}
- 
-	public void setObject(String Object) {
-		this.Object = Object;
-	}
- 
-	
-	public String getVersion() {
-		return Version;
-	}
- 
-	public void setVersion(String Version) {
-		this.Version = Version;
-	}
- 
-	
-	
 	public String getNombreCadena() {
 		return NombreCadena;
 	}
@@ -134,4 +111,6 @@ public class Cliente {
 	public String getcodigo2() {
 	    return codigo2;
 				}
+	
+ 
 }
