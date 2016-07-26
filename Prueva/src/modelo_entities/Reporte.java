@@ -14,8 +14,14 @@ public class Reporte {
 	@XmlElement(name="AdmiInfo")
 	private List<AdmiInfo> AdmiInfo;
 	
+
+	@XmlElement(name="DocNum")
+	private List<DocNum> DocNum;
+	
+	
 	@XmlElement(name="Documents")
 	private List<Cliente> BO;
+	
 	
 	@XmlElement(name="producto")
 	private List<Producto> producto;
@@ -46,8 +52,16 @@ public class Reporte {
 	public void setProducto(List<Producto> producto) {
 		this.producto = producto;
 	}
+
 	
-	
+	public List<DocNum> getrow() {
+		return DocNum;
+	}
+ 
+	public void setDocNum(List<DocNum> DocNum) {
+		this.DocNum = DocNum;
+	}
+
 	
  
  

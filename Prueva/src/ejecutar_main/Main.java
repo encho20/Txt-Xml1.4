@@ -7,12 +7,14 @@ import javax.xml.bind.JAXBException;
 import dao_model.jaxb.ReportMarshaller;
 import modelo_entities.AdmiInfo;
 import modelo_entities.Cliente;
+import modelo_entities.DocNum;
 import modelo_entities.Producto;
 import modelo_entities.Reporte;
 public class Main {
  
 	public static void main(String[] args) {
 		List<AdmiInfo> AdmiInfo = new ArrayList<>();
+		List<DocNum> DocNum = new ArrayList<>();
 		List<Cliente> Cliente = new ArrayList<>();
 		List<Producto> producto = new ArrayList<>();
 		Reporte Reporte = new Reporte();
@@ -30,10 +32,16 @@ public class Main {
 				new Producto("10", "12345678912134", "jack Daniel's")
 				
 		);
+		
+		Collections.addAll(DocNum,
+				new DocNum(null,null),
+				new DocNum()
+		);
 	
 		Reporte.setAdmiInfo(AdmiInfo);
 		Reporte.setCliente(Cliente);
 		Reporte.setProducto (producto);
+		Reporte.setDocNum(DocNum);
 		 
 		try {
 			marshaller = new ReportMarshaller<Reporte>();

@@ -95,22 +95,32 @@ public class Cliente {
 		
    public void setCiudad(String Ciudad) {
 	       this.ProjectCode= Ciudad;
-			}
+	}
+   
+   
 	public String getCiudada() {
 	    return ProjectCode;
-				}
+	}
+	
+	
 	  public void setcodigo1(String codigo1) {
 	       this.codigo1= codigo1;
-			}
+	}
+	  
+	  
 	public String getcodigo1() {
 	    return codigo1;
-				}
+	}
+	
+	
 	  public void setcodigo2(String codigo2) {
 	       this.codigo2= codigo2;
-			}
+	}
+	  
+	  
 	public String getcodigo2() {
 	    return codigo2;
-				}
+	}
 	
  
 }
