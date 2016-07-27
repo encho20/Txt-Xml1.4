@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Cliente {
+	private String DocNum;
 	private String NombreCadena;
 	private String NombreTienda;
 	private String Address;
@@ -17,12 +18,13 @@ public class Cliente {
  
 	public Cliente () {}
  
-	public Cliente (String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
+	public Cliente (String DocNum,String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
 			    Codigo_EAN_Cadena,String Codigo_SAP_Tienda,String CodigoSAP_Cadena,String Ciudad,String codigo1,String codigo2) 
 	
 	{		
 	
 		super();
+		this.DocNum = DocNum;
 		this.NombreCadena = NombreCadena;
 		this.NombreTienda = NombreTienda;
 		this.Address = DireccionTienda;
@@ -39,9 +41,13 @@ public class Cliente {
 	public String getNombreCadena() {
 		return NombreCadena;
 	}
+	
+	public String getDocNum() {
+		return DocNum;
+	}
  
-	public void setNombreCadena(String NombreCadena) {
-		this.NombreCadena = NombreCadena;
+	public void setDocNum(String DocNum) {
+		this.DocNum= DocNum;
 	}
  
 	public String getNombreTienda() {
@@ -121,6 +127,12 @@ public class Cliente {
 	public String getcodigo2() {
 	    return codigo2;
 	}
+	
+	public void setNombreCadena(String NombreCadena) {
+		this.NombreCadena = NombreCadena;
+	}
+ 
+
 	
  
 }

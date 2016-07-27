@@ -24,8 +24,8 @@ public class Main {
 				new AdmiInfo("17","2")
 		);
     	Collections.addAll(Cliente,
-			new Cliente("fsdf", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "),
-			new Cliente()
+			new Cliente("fsdf", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ")
+		
 			
 		);
 		Collections.addAll(producto,
@@ -34,8 +34,8 @@ public class Main {
 		);
 		
 		Collections.addAll(DocNum,
-				new DocNum(null,null),
-				new DocNum()
+				new DocNum("\n","\n")
+	
 		);
 	
 		Reporte.setAdmiInfo(AdmiInfo);

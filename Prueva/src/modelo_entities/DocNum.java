@@ -10,7 +10,7 @@ public  DocNum
 (String vacio,String vacio1 )
 {
 	
-	super ();
+
 this.vacio =vacio;
 this.vacio1 =vacio1;
 
