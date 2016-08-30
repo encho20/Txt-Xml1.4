@@ -4,135 +4,186 @@ import java.util.Date;
 
 public class Cliente {
 	private String DocNum;
-	private String NombreCadena;
-	private String NombreTienda;
+	private String DocDate;
+	private String DocDueDate;
+	private String CardCode;
+	private String Series;
+	private String TaxDate;
+	private String NumAtCard;
+	private String Address2;
 	private String Address;
-	private String Codigo_EAN_Cadena;
-	private String Codigo_EAN_Tienda;
-	private String Codigo_SAP_Cadena;
-	private String Codigo_SAP_Tienda;
-	private String ProjectCode;
-	private String codigo1;
-	private String codigo2;
-
+	private String Comments;
+	private String PickRemark;
+	private String U_BKV_UID;
+	private String U_GW_Fecha1;
+	private String U_GW_Fecha2;
  
-	public Cliente () {}
- 
-	public Cliente (String DocNum,String Version,String Object,String NombreCadena, String NombreTienda, String DireccionTienda,String Codigo_EAN_Tienda, String
-			    Codigo_EAN_Cadena,String Codigo_SAP_Tienda,String CodigoSAP_Cadena,String Ciudad,String codigo1,String codigo2) 
+	public Cliente (){} 
+	
+	
+	public Cliente (String comentarios ,String DocNum,String DocDate, 
+			String DocDueDate, String CardCode,String TaxDate,String Address2,String NumAtCard,String
+			    Address,String Comments,String codigo2,String U_BKV_UID,
+			    String U_GW_Fecha2,String U_GW_Fecha1,String Series) 
 	
 	{		
 	
 		super();
 		this.DocNum = DocNum;
-		this.NombreCadena = NombreCadena;
-		this.NombreTienda = NombreTienda;
-		this.Address = DireccionTienda;
-		this.Codigo_EAN_Cadena =Codigo_EAN_Cadena;
-		this.Codigo_EAN_Tienda =Codigo_EAN_Tienda;
-		this.Codigo_SAP_Cadena =CodigoSAP_Cadena ;
-		this.Codigo_SAP_Tienda =Codigo_SAP_Tienda ;
-		this.ProjectCode = Ciudad;
-		this.codigo1 = codigo1;
-		this.codigo2 = codigo2;
+		this.DocDate = DocDate;
+		this.DocDueDate = DocDueDate;
+		this.CardCode = CardCode;
+		this.TaxDate =TaxDate;
+		this.NumAtCard =NumAtCard ;
+		this.Address2 =Address2 ;
+		this.Address = Address;
+		this.Comments = Comments;
+		this.PickRemark = codigo2;
+		this.U_BKV_UID = comentarios;
+		this.U_GW_Fecha1=U_GW_Fecha1;
+		this.U_GW_Fecha2=U_GW_Fecha2;
+		this.Series=Series;
+		
 	}
-	Date now = new Date(System.currentTimeMillis());
-	SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-	public String getNombreCadena() {
-		return NombreCadena;
-	}
-	
+
+
 	public String getDocNum() {
 		return DocNum;
 	}
- 
-	public void setDocNum(String DocNum) {
-		this.DocNum= DocNum;
+
+
+	public void setDocNum(String docNum) {
+		DocNum = docNum;
 	}
- 
-	public String getNombreTienda() {
-		return NombreTienda;
+
+
+	public String getDocDate() {
+		return DocDate;
 	}
- 
-	public void setNombreTienda(String NombreTienda) {
-		this.NombreTienda = NombreTienda;
+
+
+	public void setDocDate(String docDate) {
+		DocDate = docDate;
 	}
- 
-	public String getDireccionTienda() {
+
+
+	public String getDocDueDate() {
+		return DocDueDate;
+	}
+
+
+	public void setDocDueDate(String docDueDate) {
+		DocDueDate = docDueDate;
+	}
+
+
+	public String getCardCode() {
+		return CardCode;
+	}
+
+
+	public void setCardCode(String cardCode) {
+		CardCode = cardCode;
+	}
+
+
+	public String getSeries() {
+		return Series;
+	}
+
+
+	public void setSeries(String series) {
+		Series = series;
+	}
+
+
+	public String getTaxDate() {
+		return TaxDate;
+	}
+
+
+	public void setTaxDate(String taxDate) {
+		TaxDate = taxDate;
+	}
+
+
+	public String getNumAtCard() {
+		return NumAtCard;
+	}
+
+
+	public void setNumAtCard(String numAtCard) {
+		NumAtCard = numAtCard;
+	}
+
+
+	public String getAddress2() {
+		return Address2;
+	}
+
+
+	public void setAddress2(String address2) {
+		Address2 = address2;
+	}
+
+
+	public String getAddress() {
 		return Address;
 	}
- 
-	public void set(String DireccionTienda) {
-		this.Address = DireccionTienda;
-	}
- 
-	public String getCodigo_EAN_Cadena() {
-		return Codigo_EAN_Cadena;
-	}
- 
-	public void setCodigo_EAN_Cadena(String Codigo_EAN_Cadena) {
-		this.Codigo_EAN_Cadena= Codigo_EAN_Cadena;
-	}
- 
-	public String getCodigo_EAN_Tienda () {
-		return Codigo_EAN_Tienda;
-	}
- 
-	public void setCodigo_EAN_Tienda(String Codigo_EAN_Tienda) {
-		this.Codigo_EAN_Tienda= Codigo_EAN_Tienda;
+
+
+	public void setAddress(String address) {
+		Address = address;
 	}
 
- 
-	public void setCodigoSAP_Cadena(String CodigoSAP_Cadena) {
-		this.Codigo_SAP_Cadena= CodigoSAP_Cadena;
-	}
-		public String getCodigoSAP_Cadena () {
-			return Codigo_SAP_Cadena;
-		}
-	 
-	public void setCodigo_SAP_Tienda(String Codigo_SAP_Tienda) {
-			this.Codigo_SAP_Tienda= Codigo_SAP_Tienda;
-	}
-		
-	public String getCodigo_SAP_Tienda() {
-				return Codigo_SAP_Tienda;
-	}
-	
-		
-   public void setCiudad(String Ciudad) {
-	       this.ProjectCode= Ciudad;
-	}
-   
-   
-	public String getCiudada() {
-	    return ProjectCode;
-	}
-	
-	
-	  public void setcodigo1(String codigo1) {
-	       this.codigo1= codigo1;
-	}
-	  
-	  
-	public String getcodigo1() {
-	    return codigo1;
-	}
-	
-	
-	  public void setcodigo2(String codigo2) {
-	       this.codigo2= codigo2;
-	}
-	  
-	  
-	public String getcodigo2() {
-	    return codigo2;
-	}
-	
-	public void setNombreCadena(String NombreCadena) {
-		this.NombreCadena = NombreCadena;
-	}
- 
 
-	
- 
-}
+	public String getComments() {
+		return Comments;
+	}
+
+
+	public void setComments(String comments) {
+		Comments = comments;
+	}
+
+
+	public String getPickRemark() {
+		return PickRemark;
+	}
+
+
+	public void setPickRemark(String pickRemark) {
+		PickRemark = pickRemark;
+	}
+
+
+	public String getU_BKV_UID() {
+		return U_BKV_UID;
+	}
+
+
+	public void setU_BKV_UID(String u_BKV_UID) {
+		U_BKV_UID = u_BKV_UID;
+	}
+
+
+	public String getU_GW_Fecha1() {
+		return U_GW_Fecha1;
+	}
+
+
+	public void setU_GW_Fecha1(String u_GW_Fecha1) {
+		U_GW_Fecha1 = u_GW_Fecha1;
+	}
+
+
+	public String getU_GW_Fecha2() {
+		return U_GW_Fecha2;
+	}
+
+
+	public void setU_GW_Fecha2(String u_GW_Fecha2) {
+		U_GW_Fecha2 = u_GW_Fecha2;
+	}
+
+	}
