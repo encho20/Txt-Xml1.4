@@ -14,32 +14,56 @@ public class prueba_2 {
 			BufferedReader bufferedReader = new BufferedReader(lector);
 			StringBuffer stringBuffer = new StringBuffer();
 			String linea;
-			stringBuffer.append("|"); 
-		
-			while ((linea = bufferedReader.readLine()) != null) {		
+	
 			
+			while ((linea = bufferedReader.readLine()) != null) {		
+	
+				
 				stringBuffer.append(linea);
 				stringBuffer.append("\n");
-			
+		
+					  String [] arreglo = cortarCadenaPorEspacios(linea);
+					  
+						
+					
+		             
+			  for(int i = 0; i < arreglo.length ; i++) {
+				  System.out.println(arreglo [i]);           
+				  if (i==13){
+					  System.out.println(" \n");
+				  }
+				             
+					//  System.out.println( arreglo[i]);
+					    	//System.out.println(arreglo.length);
+					
+		   
+		        
+					    }
+					    	
+					 		  
+					 }
+			   
 				
-				
-			 }
-			
-			
 			lector.close();
 
 				
 			System.out.println("Contenido");
-			System.out.println(stringBuffer.toString());
+	      System.out.println(stringBuffer.toString());
 			System.out.println("\n");
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		
 			
-	         }
+	            }
+	         
 		}
-	
- }
 
- 
+	private static String[] cortarCadenaPorEspacios(String linea) {
+		// TODO Auto-generated method stub
+		return linea.split(" ");
+		  
+				
+	}
+
+}
