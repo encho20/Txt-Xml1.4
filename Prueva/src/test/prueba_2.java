@@ -7,9 +7,25 @@ import java.io.IOException;
 
 public class prueba_2 {
 
-	public static void main(String[] args) {
+	private String DocNum;
+	private String DocDate;
+	private String DocDueDate;
+	private String CardCode;
+	private String Series;
+	private String TaxDate;
+	private String NumAtCard;
+	private String Address2;
+	private String Address;
+	private String Comments;
+	private String PickRemark;
+	private String U_BKV_UID;
+	private String U_GW_Fecha1;
+	private String U_GW_Fecha2;
+ 
+	
+	public  void LeerTexto (String direccion){ 
 		try {
-			File Abrir_archivo = new File("C:\\Users\\practicantesistemas\\Desktop\\Edison Dearmas\\testeo.txt");
+			File Abrir_archivo = new File("C:\\testeo\\l2.txt");
 			FileReader lector = new FileReader(Abrir_archivo);
 			BufferedReader bufferedReader = new BufferedReader(lector);
 			StringBuffer stringBuffer = new StringBuffer();
@@ -36,6 +52,8 @@ public class prueba_2 {
 					//  System.out.println( arreglo[i]);
 					    	//System.out.println(arreglo.length);
 					
+				  
+				  
 		   
 		        
 					    }
@@ -47,23 +65,24 @@ public class prueba_2 {
 			lector.close();
 
 				
-			System.out.println("Contenido");
-	      System.out.println(stringBuffer.toString());
-			System.out.println("\n");
+			//System.out.println("Contenido");
+	      //System.out.println(stringBuffer.toString());
+			//System.out.println("\n");
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		
 			
-	            }
+			
+				  
+						
+			}
+
+		}
+			
+	private static String[] cortarCadenaPorEspacios(String linea) {
+		// TODO Auto-generated method stub
+		return linea.split("	");  }
 	         
 		}
 
-	private static String[] cortarCadenaPorEspacios(String linea) {
-		// TODO Auto-generated method stub
-		return linea.split(" ");
-		  
-				
-	}
 
-}

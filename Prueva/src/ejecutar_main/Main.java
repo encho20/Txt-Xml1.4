@@ -10,18 +10,24 @@ import modelo_entities.Cliente;
 import modelo_entities.DocNum;
 import modelo_entities.Producto;
 import modelo_entities.Reporte;
+import test.prueba_2;;
 public class Main {
 	public static void main(String[] args) {
+
+		prueba_2 lector= new prueba_2();
+		lector.LeerTexto(" ");
+		
 		List<AdmiInfo> AdmiInfo = new ArrayList<>();
 		List<Cliente> Cliente = new ArrayList<>();
 		List<Producto> producto = new ArrayList<>();
 		Reporte Reporte = new Reporte();
 		ReportMarshaller<Reporte> marshaller = null;
- 
+		
 		Collections.addAll(AdmiInfo,
 				new AdmiInfo("17","2")
 		);
-    	Collections.addAll(Cliente,
+		
+		Collections.addAll(Cliente,
 			new Cliente("1", "\n", " 3", "4", "5", "6",
 					"7", "8", "9", "10", "20160822", "12"," 11"
 							 ,"13","14")
@@ -34,7 +40,8 @@ public class Main {
 		);
 		
 		
-	
+		
+		
 		Reporte.setAdmiInfo(AdmiInfo);
 	    Reporte.setCliente(Cliente);
 		Reporte.setProducto (producto);
